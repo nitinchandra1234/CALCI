@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  backend:
+    build: 
+      context: ./python
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"  # Adjusted port mapping for the backend
+
+  frontend:
+    build: 
+      context: ./sum-app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend  # Specify the dependency on the backend service
