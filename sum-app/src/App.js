@@ -8,7 +8,7 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://0.0.0.0:8000/sum', {
+      const response = await fetch('http://13.233.80.252:8000/sum', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
